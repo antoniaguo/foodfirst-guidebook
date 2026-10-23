@@ -3,6 +3,7 @@
 A communal, living guidebook of food resources at McGill University and in Montreal: an interactive map of free and affordable food locations, a written history of food initiatives at McGill, and a resource bank for students facing food insecurity — and for students who want to volunteer.
 
 **Live site:** https://antoniaguo.github.io/foodfirst-guidebook/
+**Print guidebook (PDF):** [food-at-mcgill-guidebook.pdf](food-at-mcgill-guidebook.pdf) — the designed 40-page March 2024 edition that complements the website
 
 ## What's inside
 
