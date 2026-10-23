@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FoodFirst — Food at McGill Guidebook: a map and guide to free and affordable food resources, food banks, community meals and food justice initiatives at McGill University and in Montreal.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Food at McGill Guidebook — FoodFirst">
+    <meta property="og:description" content="A map and guide to free and affordable food resources, food banks and community meals at McGill and in Montreal.">
+    <meta property="og:type" content="website">
+    <title>Food at McGill Guidebook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecdcbd; /* Updated background color */
+            color: #362a24; /* Updated text color */
+        }
+
+        header {
+            background-color: #60a053; /* Updated background color */
+            color: #ecdcbd;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .tab {
+            display: none;
+            background-color: #f6d265; /* Updated background color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .tab.active {
+            display: block;
+        }
+
+        .tab-content {
+            padding: 20px;
+        }
+
+        .tab-links {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tab-links button {
+            background-color: #bb5743; /* Updated background color */
+            color: #ecdcbd; /* Updated text color */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 0 10px; /* Adjusted spacing */
+        }
+
+        .tab-links button:hover {
+            background-color: #9892c9; /* Updated background color on hover */
+        }
+
+        #map-container {
+            width: 100%;
+            height: 70vh; /* Adjusted height */
+            background-color: #362a24; /* Updated background color */
+            margin: 20px 0; /* Added margin */
+            overflow: hidden; /* Hide overflow */
+        }
+
+        #map-container iframe {
+            width: calc(100% + 20px); /* Adjusted width to account for border */
+            height: calc(100% + 20px); /* Adjusted height to account for border */
+            margin: -10px; /* Compensate for the border */
+            border: 5px solid #9892c9; /* Updated border color */
+        }
+
+        footer {
+            background-color: #60a053; /* Updated background color */
+            color: #ecdcbd; /* Updated text color */
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0; /* Added to remove default margin */
+        }
+
+        .land-acknowledgment {
+            background-color: #9892c9; /* Updated background color */
+            color: #ecdcbd; /* Updated text color */
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto; /* Center alignment */
+            max-width: 600px; /* Limiting width */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .land-acknowledgment p {
+            margin: 0; /* Added to remove default margin */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Food at McGill Guidebook</h1>
+        <p>A comprehensive review and written history related to Food at McGill.</p>
+        <p>This guidebook serves as a communal, living platform for initiatives related to Food at McGill.</p>
+    </header>
+
+    <div class="tab-links">
+        <button onclick="openTab('map')">Map</button>
+        <button onclick="openTab('introduction')">Introduction and Goals</button>
+        <button onclick="openTab('written_history')">Written History</button>
+        <button onclick="openTab('resource_bank')">Resource Bank</button>
+        <button onclick="openTab('start_club')">How to Start a Club/Initiative</button>
+        <button onclick="openTab('mobilization_efforts')">Mobilization Efforts</button>
+        <button onclick="openTab('interesting_projects')">Interesting Projects</button>
+        <button onclick="openTab('works_cited')">Works Cited and Further Reading</button>
+    </div>
+
+    <div id="map" class="tab active">
+        <div id="map-container">
+            <iframe src="https://umap.openstreetmap.fr/en/map/foodfirst-guidebook_1030462#12/45.4740/-73.5871" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
+
+    <div id="introduction" class="tab">
+        <div class="tab-content">
+            <h2>Getting Started with this Guide</h2>
+            <p></p>  
+            <h2>Introduction</h2>
+            <p>The Food at McGill guidebook aims to provide a comprehensive review and written history related to Food at McGill - this can include clubs working in food, resources for those who may be in a position of food insecurity, definitions of food insecurity, and interesting projects. This guidebook’s goal is to provide a consolidated platform for initiatives related to Food at McGill to live and be updated. This guidebook functions as a communal, living platform.</p>
+            <h2>Goals</h2>
+            <ul>
+                <li>Less duplication of efforts: in presenting our written history and resource bank, students passionate about food and food justice are able to understand the landscape better and see what initiatives already exist or have existed in the past.</li>
+                <li>Raising awareness: consolidating all the efforts into one ultimate master document that compiles resources from many different places can allow for more clarity and accessibility in resources. Students can also find new resources through this guide that they may not have heard of before.</li>
+                <li>Inspiring further projects: through reading through the written history and learning about other projects, students are able to see which initiatives could be revived that they are passionate about.</li>
+                <li>Demystifying and debunking: food security is a multifaceted concept that is ill-defined in the general vernacular. In listing definitions here as well as resources for further readings of food justice, students will be better able to identify food insecurity and learn about concepts such as food justice and food sovereignty.</li>
+            </ul>
+            <h2>Additional Information</h2>
+            <p>Food security is defined as the state of having reliable access to a sufficient quantity of affordable, nutritious, and culturally relevant food in order to meet the requirements for an active and healthy life.</p>
+            <p>There exist 4 dimensions of food security:</p>
+            <ul>
+                <li><strong>Physical availability of food:</strong> Food availability addresses the “supply side” of food security and is determined by the level of food production, stock levels, and net trade.</li>
+                <li><strong>Economic and physical access to food:</strong> An adequate supply of food at the national or international level does not in itself guarantee household level food security. Concerns about insufficient food access have resulted in a greater policy focus on incomes, expenditure, markets, and prices in achieving food security objectives.</li>
+                <li><strong>Food utilization:</strong> Utilization is commonly understood as the way the body makes the most of various nutrients in the food. Sufficient energy and nutrient intake by individuals are the result of good care and feeding practices, food preparation, diversity of the diet, and intra-household distribution of food.</li>
+                <li><strong>Stability of the other three dimensions over time:</strong> Even if your food intake is adequate today, you are still considered to be food insecure if you have inadequate access to food on a periodic basis, risking a deterioration of your nutritional status. Adverse weather conditions, political instability, or economic factors (unemployment, rising food prices) may have an impact on your food security status. (World Bank Group, 2023)</li>
+            </ul>
+    
+            <p>Food justice - ‘Food justice is a holistic and structural view of the food system that sees healthy food as a human right and addresses structural barriers to that right.’ (FoodPrint, 2024)</p>
+            <p>Common themes include increased food access, autonomy to grow food, and uplifting grassroots movements and organizations.</p>
+            <p>Food justice can look different among communities and levels of governance, and takes into account the needs of specific communities; each community participates in creating the vision for what food justice would look like for that community.</p>
+    
+            <p>Food sovereignty is the right of peoples to healthy and culturally appropriate food produced through ecologically sound and sustainable methods, and their right to define their own food and agriculture systems.</p>
+            <p>Food sovereignty challenges current power structures in the food system, recognizing the right to healthy and culturally appropriate foods.</p>
+            <p>On a university campus, food sovereignty involves the student population exercising more agency and control over their on-campus food options.</p>
+            <p>Food sovereignty also aims to ‘empower and honor students no matter where they lie on the food security spectrum.’ In conversations with various players at SSMU, on campus, and off campus, we’ve found that many students are hesitant to define themselves as food insecure or in need of food security interventions.</p>
+    
+            <p><strong>In reality, 56.8% of all university students in Canada can be defined as food insecure. (The Sandbox Project, 2022)</strong></p>
+    
+            <p><strong> 2022 survey found that 74.5% of international students, 69.3% of queer students, and 82.6% of single parents disproportionately experience food insecurity.</strong></p>
+        </div>
+    </div>
+        </div>
+    </div>
+    
+    
+    <div id="written_history" class="tab">
+        <div class="tab-content">
+            <h2>Written History</h2>
+            <p>Providing a written history of the various food initiatives at McGill can serve to educate those curious about learning more about mobilization and student initiatives. Through reading the written history, students will be able to learn about past initiatives, and discover past initiatives and organizations that could potentially be revived in a future initiative.</p>
+            <h3>Pre 1999:</h3>
+            <p>SSMU, AUS and EUS operate most campus cafes and vending machines.</p>
+            <h3>1999:</h3>
+            <p>McGill signs 11 year Cold Beverage Agreement (CBA) with Coca Cola that gave them exclusive mandate on beverage distribution on campus. The SSMU 2000 referendum rejected this contract (54%). CBA is dissolved.</p>
+            <h3>2000:</h3>
+            <p>McGill takes control of Redpath cafeteria (previously run by SSMU) and Bronfman Cafeteria (previously run by MUS).</p>
+            <!-- More historical events can be added following the same format -->
+            <h3>2001:</h3>
+            <p>Student associations in Arts, Music, and Engineering sell their cafeterias to McGill. Many tactics were taken by administration to achieve this, including withholding student fees from the AUS.</p>
+            <h3>2002:</h3>
+            <p>McGill signs non-exclusive contract with Coca-Cola for beverage provision. SSMU signs an exclusivity contract with Pepsi in the University Center. The GrassRoots Association for Student Power is formed, a student movement response to globalization, corporatization, and privatization of food on campus. Midnight Kitchen is formed by Grassroots People's Movement (GrasPe) members to have an alternative food source on campus.</p>
+            <h3>2003:</h3>
+            <p>As the 16 cafeterias contracts with McGill are about to expire, it seeks to consolidate them under a monopoly to make things “easier”. In response, the Coalition for Action on Food Services (CAFS) is created as a student, staff, and faculty effort. One of its goals was to ensure that students “enjoy the unfettered right to sell food on campus to fundraise.” A panel on the future of food at McGill is held, a petition with 7500 signatures is organized, a 3-day boycott on Chartwells (food service provider) is held. 82% of students voted NO to monopolization on an SSMU referendum.</p>
+            <h3>Winter 2004:</h3>
+            <p>McGill administration backtracks their plan to have a single food provider on
+                campus, following months of pressure from students, faculty, staff and media.</p> <!-- Add content if available -->
+            <h3>Fall 2004:</h3>
+            <p>The temporary body Dining at McGill Advisory Comittee (DMAC) forms,
+                following pressure from students for faculty to fulfill their promise of creating a
+                food advisory committee</p>
+            <h3>January 31, 2005:</h3>
+            <p>DMAC submits their report on recommendations for food services that includes:
+                - The creation of permanent food services committee - Protection of student fundraising activities, ex. Bake Sales - Permission for students and staff to choose their own food service providers for
+                on campus events - The requirement that any food service provider must contribute to university
+                projects
+                McGill ultimately signs an exclusivity agreement with the Chartwells brand,
+                operated by the Compass group.</p> <!-- Add content if available -->
+            <h3>2007:</h3>
+            <p>McGill unilaterally gave the Architecture (which was fair trade, low cost, student
+                run since 1993) 2 choices: to become a food-less lounge space or be taken over by
+                Food Services in order “to have a common strategy for food services.”
+                A “Save the Architecture Cafe” Facebook group forms with more than 1500
+                students, 100 student protest in front of the James Administration building.
+                An agreement for joint management between students and McGill’s Ancillary
+                services was reached.</p>
+            <h3>2008:</h3>
+            <p>A 2-day boycott of corporate food services on campus organized by the Food Services Committee (food coalition modeled on CAFS) is held. “The boycott aimed to sensitize students to McGill’s ongoing efforts to corporatize food services on campus, as well as highlight the benefits of student-run alternatives like Midnight Kitchen, Architecture Café, AUS Snax, and Frostbite.” (McGill Daily) The McGill Food Systems Project is created as a collaboration with students, staff, and faculty. The Project conducted student-led research on food sustainability.</p>
+            <h3>March 2009:</h3>
+            <p>Caférama, a corporate-run café in the SSMU building, got replaced by Café Supreme, another corporate-run café in a close vote between a student-run initiative, which is said to have a less detailed and clear proposal. The Mandatory Meal Plan in residence halls goes into effect. Architecture café closed permanently due to financial losses and ‘improper management’ Over 300 students gathered outside Leacock protesting Deputy Provost (leader of McGill’s Student Life and Learning team) said “[The Architecture Café] provided a cheap lunch, and that’s because it was a subsidized lunch. (...) The university cannot afford to subsidize anyone’s lunch.”</p> <!-- Add content if available -->
+            <h3>June 2009:</h3>
+            <p>The Mandatory Meal Plan in residence halls goes into effect.</p>
+            <h3>Fall 2009:</h3>
+            <p>The Macdonald Student Ecological Gardens (MSEG) is created, the first McGill Farmer’s Market is held.</p>
+            <h3>2010:</h3>
+            <p>Midnight Kitchen starts offering free meals every weekday.Architecture café closed permanently due to financial losses and ‘improper
+                management’
+                Over 300 students gathered outside Leacock protesting
+                Deputy Provost (leader of McGill’s Student Life and Learning team) said “[The
+                Architecture Café] provided a cheap lunch, and that’s because it was a subsidized
+                lunch. (...) The university cannot afford to subsidize anyone’s lunch.”</p>
+            <h3>2011:</h3>
+            <p>SNAC is founded as an Enactus McGill initiative.</p>
+            <h3>2014:</h3>
+            <p>Dispatch cafe opens in McConnell. SSMU legislative council: Deputy Provost Dyens denies having ever claimed to support student-run services and told Council that the McGill administration is “not for these things.” “I represent the students, but we also have a business relationship.” Nest, a student-run cafe in the SSMU building opens, following 3 years of lobbying. Quesada and Bento replace Sinfully Asian in the Bronfman building, based on student consultation that revealed a need for multiple dining options. Premiere Moisson opens in Redpath, replacing Tim Hortons. The Compass group’s Bon Appetit management is implemented following an SHHS bid. SNAX, the AUS cafe, is ordered to stop sandwich sales on account of violating its Memorandum of Agreement (MOA) with the University.</p>
+            <h3>2015:</h3>
+            <p>McGill Food Coalition is
+                formed, notably following the
+                order of cease and desist of
+                SNAX sandwiches.</p>
+            <p>Goals included:
+                - Help food student run clubs who alone are vulnerable to the decisions of
+                administration, unite to have more negotiation power with the faculty. - Support student-run food services in their interactions with the McGill
+                administration - Promote food accessibility, student input in campus space allocation, and
+                sustainability.
+                SSMU also endorsed the MFC: the VP finance of Finance and Operations reported
+                on MFC activities to the SSMU legislative council.
+                A SSMU food survey is also launched, with 80% of students feeling that
+                on-campus food options were not affordable (sample size: 1339)</p>
+            <h3>April 2018:</h3>
+            <p>Bento and Quesada in Bronfman building close down to make space for the
+                Retail School. Students are disappointed and frustrated by lack of community
+                space in the building.</p>
+            <h3>2019:</h3>
+            <p>Premiere Moisson is replaced by Redpath Cafe that includes a Bento and Mandy’s
+                salads (15+$!!!!!)
+                Staff are happier because the meals were advertised to be made fresh daily and
+                healthier options were provided.
+                Students wish to be involved in negotiation of new contract with food provider:
+                SSMU sends a recommendation letter to the advisory committee in charge of
+                selecting the new food provider.
+                Students wished to advocate for affordability and variety (meeting all dietary
+                requirements).</p>
+            <h3>2021:</h3>
+            <p>Couche-Tard flagship opens in the Bronfman building.</p>
+            <h3>2022:</h3>
+            <p>SSMU Grocery Program launches.</p>
+            <h3>2023:</h3>
+            <p>Let’s Eat McGill is founded following research concerning on-campus food
+                insecurity.
+                McGill dining halls switch to a All-You-Can-Eat option.</p>
+        </div>
+    </div>
+    
+
+    <div id="resource_bank" class="tab">
+        <div class="tab-content">
+            <h2>Resource Bank</h2>
+            <p><em><strong> This section provides a sample of available resources. For detailed information on each resource, please refer to the "Map" tab and hover over each location for additional details.</strong></em></p>
+            <p>The resource bank is both for beneficiaries and volunteers. Students who find themselves in a situation of food precarity or food insecurity can find resources, and students looking to volunteer with a food-related organization can find initiatives in need of volunteers. This resource bank is also accompanied by a map.</p>
+            <h3>Free meals near / on campus:</h3>
+            <ul>
+                <li><strong>Midnight Kitchen</strong><br>3480 McTavish (SSMU building, third floor ballroom)<br>Midnight Kitchen provides a once-a-week free / PWYC meal service for any member of the McGill or Montreal community. The meals are vegan and nut-free, each with a nutritious main course, a side, and dessert. The service is targeted towards students who identify as benefitting from access to food through Midnight Kitchen. Free meals are usually on Thursdays at 1, but is subject to change. Please check the calendar on their website! <a href="https://midnightkitchen.org" target="_blank">midnightkitchen.org</a> | <a href="mailto:midnightkitchencollective@gmail.com">midnightkitchencollective@gmail.com</a> | <a href="https://www.instagram.com/midnightkitchencollective/" target="_blank">@midnightkitchencollective</a></li>
+                <li><strong>The People’s Potato</strong><br>1455 Maisonneuve O H711 (7th floor of Hall building)<br>The People’s Potato is a vegan soup kitchen at Concordia University, offering by donation meals from Mondays to Thursdays from 12:30pm to 2:00pm in the fall and winter semesters, excluding holidays. They also offer a bi-weekly food bank and community garden. For more information, visit their website! <a href="https://peoplespotato.com" target="_blank">peoplespotato.com</a> | <a href="mailto:peoplespotato@gmail.com">peoplespotato@gmail.com</a> | <a href="https://www.instagram.com/thepeoplespotato/" target="_blank">@thepeoplespotato</a></li>
+                <li><strong>SNAC (Student Nutrition Accessibility Club)</strong><br>SNAC is a SSMU service that aims to promote nutrition on McGill's campus. We run a weekly free produce distribution to fight food insecurity, host monthly nutrition workshops, and aim to engage the McGill community in sustainable food systems. SNAC offers a weekly FREE ‘Good Food Box.’ McGill community members can sign up to receive a box and find more information on their website. <a href="https://snac.ssmu.ca" target="_blank">snac.ssmu.ca</a> | <a href="mailto:snac.mcgill@ssmu.ca">snac.mcgill@ssmu.ca</a> | <a href="https://www.instagram.com/snac_mcgill/" target="_blank">@snac_mcgill</a></li>
+            </ul>
+            <h3>Affordable meals near / on campus:</h3>
+            <ul>
+                <li><strong>Rabbit Hole by The Yellow Door</strong><br>3625 Aylmer<br>The Rabbit Hole is a volunteer-run cafe that serves affordable, healthy vegan meals to the community. Fridays at 12:00pm during the academic year, we serve up a delicious and healthy lunch at an affordable price. Follow their Instagram to see each week’s menu! *cash only, BYOC (bring your own container)* <a href="https://yellowdoor.org/the-rabbit-hole.html" target="_blank">yellowdoor.org/the-rabbit-hole.html</a> | <a href="mailto:info@yellowdoor.org">@theyellowdoororg</a></li>
+                <li><strong>McGill Farmer’s Market</strong><br>Rue McTavish<br>The McGill Farmers' Market is a weekly gathering spot for students, faculty, and community members to discover local foods. With more than ten local suppliers, the Market provides the opportunity for downtown residents to connect to the agricultural community of Quebec. The market runs during the summer into the Fall semester. <a href="https://mcgillfarmersmarket.org" target="_blank">mcgillfarmersmarket.org</a> | <a href="mailto:mcgillfarmersmarket@gmail.com">@mcgillfarmersmarket</a></li>
+                <li><strong>Resto Plateau</strong><br>4450 Rue St-Hubert #232<br>Resto Plateau is a non-profit organization and social economy actor with the mission of supporting autonomy and inclusion as well as respond to essential needs such as social and professional integration and food security in the Montreal community and its surrounding areas. The Community Restaurant is open Monday to Friday from 11:30 - 13:30 with full meals starting at $4.75. <a href="https://restoplateau.com" target="_blank">restoplateau.com</a> | <a href="mailto:info@restoplateau.com">@resto.plateau</a></li>
+                <li><strong>Gert’s</strong><br>3480 McTavish (basement of SSMU building)<br>Gerts Bar & Café is McGill University's student-run bar and café since 1974. Gerts' mission, as a part of the SSMU, is to provide affordable food and beverages to students while creating a safe community space and event space for students, clubs, and groups. <a href="https://gertscampusbar.ca" target="_blank">gertscampusbar.ca</a> | <a href="mailto:gertscafe@ssmu.ca">@gertscafe</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="start_club" class="tab">
+        <div class="tab-content">
+            <h2>How to Start a Club/Initiative</h2>
+            <p>So you have an initiative idea, now what? It’s hard to navigate the system at McGill and figure out where to start when first ideating an initiative. We’ve compiled a list of resources and organizations that provide guidance on club formation, initiative formation, and funding.</p>
+            <p>In this section, you’ll find resources on:</p>
+            <ul>
+                <li>How to start a SSMU club</li>
+                <li>How to apply for McGill’s Sustainable Projects Fund (SPF)</li>
+                <li>Sources of discretionary funding</li>
+                <li>Other sources of funding</li>
+            </ul>
+            <p>Take a look at the ‘interesting projects’ section or research a bit before you think about starting a club or looking for funding for your initiative. That project may have already been done in the past! It’s usually easier to revive a past project rather than start a new initiative from scratch.</p>
+        </div>
+    </div>
+    
+
+
+    <div id="mobilization_efforts" class="tab">
+        <div class="tab-content">
+            <h2>Mobilization Efforts</h2>
+            <p>There has been lots of momentum recently surrounding the McGill administration’s lack of attention towards the growing presence of post-secondary food insecurity in Montreal. Want to do something about it? There are many groups working towards student mobilization that are hoping to make a change in various causes.</p>
+            <h3>Let’s Eat McGill</h3>
+            <p>In winter 2023, amid soaring food inflation and concerns of food insecurity on campus, Let’s Eat McGill emerged as a student group advocating for “affordable, sustainable and student-student managed food options on campus”. It has since held town hall events, organized sit-in protests with free-lunch distributions, created petitions and email protest campaigns, and done research on the prevalence and reasons of food insecurity on campus.</p>
+            <p><strong>Website:</strong> <a href="https://letseatmcgill.com" target="_blank">letseatmcgill.com</a><br><strong>Email:</strong> letseatmcgill@gmail.com<br><strong>Instagram:</strong> <a href="https://www.instagram.com/lets.eat.mcgill" target="_blank">@lets.eat.mcgill</a></p>
+            <h3>Divest McGill</h3>
+            <p>Established in 2012, Divest McGill is a student advocacy group fighting for McGill to stop supporting the fossil fuel sector through its investments in the McGill Investment Pool (endowment fund). They also “engage in solidarity actions with communities most affected by the fossil fuel industry’s operations, particularly Indigenous communities”. Finally, they wish to inform and mobilize the McGill community on ecological issues.</p>
+            <p><strong>Website:</strong> <a href="https://divestmcgill.ca" target="_blank">divestmcgill.ca</a><br><strong>Email:</strong> divestmcgill@gmail.com<br><strong>Instagram:</strong> <a href="https://www.instagram.com/divestmcgill" target="_blank">@divestmcgill</a></p>
+            <p>Food insecurity is an issue that is intersectional in nature; food justice and food sovereignty concern issues of environmental justice and climate change, as well as many social movements. Many student mobility groups exist at McGill that may not relate directly to food, but we encourage those interested in organizing and activism to look further than the listed organizations in this guidebook.</p>
+        </div>
+    </div>
+    
+
+    <div id="interesting_projects" class="tab">
+        <div class="tab-content">
+            <h2>Interesting Projects - past and present</h2>
+            <p>Did you know that in the fall semester, 80% of the vegetables served at McGill dining halls come from the Mac Campus farms? Did you also know that this initiative actually started as a student SPF project? Here are some more interesting projects that have happened in the past, to educate curious students and also to perhaps inspire future initiatives. In our stakeholder consultations, we’ve found that McGill has a vibrant past of projects relating to food that unfortunately become left and forgotten once their founders graduate. In providing a list of past projects, we can hopefully inspire students interested in starting initiatives to instead revive an older project.</p>
+            <p>Most projects in this section came from research on old SPF projects. To see more, visit <a href="https://mcgill.ca/sustainability/engage/projects" target="_blank">mcgill.ca/sustainability/engage/projects</a>.</p>
+        </div>
+    </div>
+    
+
+    <div id="works_cited" class="tab">
+        <div class="tab-content">
+            <h2>Works Cited and Further Reading</h2>
+            <p>Food Justice. (2024, February 28). FoodPrint; FoodPrint. <a href="https://foodprint.org/issues/food-justice/" target="_blank">https://foodprint.org/issues/food-justice/</a></p>
+            <p>Smith, S. (2022, June 8). The Sandbox Project. The Sandbox Project. <a href="https://sandboxproject.ca/the-ycrh-blog/2022/5/31/accessibility-and-affordability-the-status-of-student-food-insecurity-in-canada?clid=IwAR3p1Ob7FMG910r0pnku5e6kVM_PxClkRBMwouh5pYVj4TC482tkANlArbg" target="_blank">https://sandboxproject.ca/the-ycrh-blog/2022/5/31/accessibility-and-affordability-the-status-of-student-food-insecurity-in-canada?clid=IwAR3p1Ob7FMG910r0pnku5e6kVM_PxClkRBMwouh5pYVj4TC482tkANlArbg</a></p>
+            <p>The right to food : resolution / adopted by the General Assembly. (2002, December 18). United Nations Digital Library System. <a href="https://digitallibrary.un.org/record/482533?ln=en" target="_blank">https://digitallibrary.un.org/record/482533?ln=en</a></p>
+            <p>World Bank Group. (2023, August 28). What is food security. World Bank; World Bank Group. <a href="https://www.worldbank.org/en/topic/agriculture/brief/food-security-update/what-is-food-security#:~:text=Based%20on%20the%201996%20World,an%20active%20and%20healthy%20life." target="_blank">https://www.worldbank.org/en/topic/agriculture/brief/food-security-update/what-is-food-security#:~:text=Based%20on%20the%201996%20World,an%20active%20and%20healthy%20life.</a></p>
+        </div>
+    </div>
+    
+
+
+
+    <footer>
+        <p>© March 2024  Edition Food at McGill Guidebook | compiled by Catherine Chen, Antonia Guo,
+            Yinghan Tian, and Nikos Wildhaber-Riley </p>
+    </footer>
+
+    <div class="land-acknowledgment">
+        <p>We also recognize that McGill University
+            (Tiohtiá:ke/Montreal) is situated on the traditional territory
+            of the Kanien’kehà:ka, a place which has long served as a
+            site of meeting and exchange amongst many First Nations
+            including the Kanien’kehá:ka of the Haudenosaunee
+            Confederacy, Huron/Wendat, Abenaki, and Anishinaabeg.
+            We recognize and respect the Kanien’kehà:ka as the
+            traditional custodians of the lands and waters on which we
+            meet today. 
+        </p>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            var i, tabContent;
+            tabContent = document.getElementsByClassName("tab");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>
